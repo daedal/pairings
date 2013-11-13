@@ -1,0 +1,7 @@
+%h3 Select you cheese
+
+%ul
+  -@cheeses.each do |cheese|
+    %li.row
+      .columns.large-6
+        = link_to " #{cheese.name} #{cheese.milk} #{cheese.country_of_origin}", cheese_path(cheese.id)

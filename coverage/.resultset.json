@@ -1,0 +1,50 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/yaron/Desktop/pairings/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/yaron/Desktop/pairings/app/models/cheese.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/yaron/Desktop/pairings/app/models/trait.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/yaron/Desktop/pairings/app/models/wine.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1383868468
+  }
+}

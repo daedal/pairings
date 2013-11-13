@@ -1,28 +1,36 @@
-== README
+#Pairings
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A site which gives suggestions on cheese/wine pairings
 
-Things you may want to cover:
+####Technology Used:
 
-* Ruby version
+Back End
+- Ruby 2.0  
+- Rails 4  
+- PG Dataabase 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Front End
+- Zurb Foundation  
+- CoffeeScript  
+- ERB/HAML  
+- SCSS  
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+The bartendr.me team wants to extend thanks to the team at [import.io](http://www.import.io)
+
+
+
+To run:
+```
+$ git clone <link to repo>
+```
+
+```
+$ cd bartendr
+```
+```
+rake db:create db:migrate db:seed
+```
+```
+rails s
+```

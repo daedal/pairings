@@ -1,0 +1,25 @@
+%nav.top-bar.fixed
+  %ul.title-area
+    %li.name
+      %h1= link_to "Pairings", root_path
+  %section.top-bar-section
+    %ul.right
+      %li.has-dropdown
+        %a{href: "#{wines_path}"} Wines
+        %ul.dropdown
+          %li=link_to 'Red', variety_path('red')
+          %li=link_to 'White', variety_path('white')
+          %li=link_to 'Sparkling', variety_path('sparkling')
+          %li=link_to 'Rosé', variety_path('rose')
+          %li=link_to 'Fortified', variety_path('fortified')
+      %li.divider
+      %li.has-dropdown
+        %a{href: "#{cheeses_path}"} Cheeses
+        %ul.dropdown
+          %li=link_to 'Cheese Type', cheeses_path
+          %li=link_to 'Cheese Type', cheeses_path
+          %li=link_to 'Cheese Type', cheeses_path
+          %li=link_to 'Cheese Type', cheeses_path
+          %li=link_to 'Cheese Type', cheeses_path
+      %li.divider
+      %li= link_to 'Placeholder',  '#'

@@ -1,0 +1,14 @@
+=form_for @trait do |f|
+  .row
+    .columns.large-2
+      =f.label 'Trait:'
+    .columns.large-2.pull-7
+      =f.text_field :name, {required: true}
+  .row
+    .columns.large-2
+      =f.label 'Description:'
+    .columns.large-2.pull-7
+      =f.text_field :description
+  .row
+    .columns.large-1
+      =f.submit

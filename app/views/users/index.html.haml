@@ -1,0 +1,17 @@
+%br
+%br
+%br
+
+.row
+  %h4 Wines
+  %hr
+  %ul
+    -@wines.each do |wine|
+      %li= link_to "#{wine.vintage} #{wine.grape_type} #{wine.appellation}", wine_path(wine.id)
+
+.row
+  %h4 Cheeses
+  %hr
+  %ul
+    -@cheeses.each do |cheese|
+      %li= link_to cheese.name, cheese_path(cheese.id)

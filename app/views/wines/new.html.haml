@@ -1,0 +1,64 @@
+=form_for @wine do |f|
+  .row
+    .columns.large-1
+      =f.label 'vintage:'
+    .columns.large-2.pull-8
+      =f.text_field :vintage,             {required: true}
+  .row
+    .columns.large-1
+      =f.label 'winery:'
+    .columns.large-2.pull-8
+      =f.text_field :winery,              {required: true}
+  .row
+    .columns.large-1
+      =f.label 'grape_variety:'
+    .columns.large-2.pull-8
+      =f.text_field :grape_type
+  .row
+    .columns.large-1
+      =f.label 'appelation:'
+    .columns.large-2.pull-8
+      =f.text_field :appellation,          {required: true}
+  .row
+    .columns.large-1
+      =f.label 'type/color:'
+    .columns.large-2.pull-8
+      =select(:wine, :variety, ["Red", "White", "Sparkling", "Rosé", "Fortified"], {include_blank: true, required: true})
+  .row
+    .columns.large-1
+      =f.label 'alcohol_percentage:'
+    .columns.large-2.pull-8
+      =f.text_field :alcohol_percentage
+  .row
+    .columns.large-1
+      =f.label 'serving_temperature:'
+    .columns.large-2.pull-8
+      =f.text_field :serving_temperature
+  .row
+    .columns.large-1
+      =f.label 'sweetness:'
+    .columns.large-2.pull-8
+      =select(:wine, :sweetness, 1..10, {include_blank: true})
+  .row
+    .columns.large-1
+      =f.label 'acidity:'
+    .columns.large-2.pull-8
+      =select(:wine, :acidity, 1..10, {include_blank: true})
+  .row
+    .columns.large-1
+      =f.label 'tanin:'
+    .columns.large-2.pull-8
+      =select(:wine, :tanin, 1..10, {include_blank: true})
+  .row
+    .columns.large-1
+      =f.label 'fruit:'
+    .columns.large-2.pull-8
+      =select(:wine, :fruit, 1..10, {include_blank: true})
+  .row
+    .columns.large-1
+      =f.label 'body:'
+    .columns.large-2.pull-8
+      =select(:wine, :body, 1..10, {include_blank: true})
+  .row
+    .columns.large-1
+      =f.submit 'Add Wine'
