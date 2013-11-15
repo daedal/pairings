@@ -7,7 +7,7 @@ A site which gives suggestions on cheese/wine pairings
 Back End
 - Ruby 2.0  
 - Rails 4  
-- PG Dataabase 
+- PG Database 
 
 Front End
 - Zurb Foundation  
@@ -16,21 +16,17 @@ Front End
 - SCSS  
 
 
-The bartendr.me team wants to extend thanks to the team at [import.io](http://www.import.io)
+Pairings wants to extend thanks to the team at [import.io](http://www.import.io)
 
 
 
 To run:
-```
+``` sh
 $ git clone <link to repo>
-```
 
-```
-$ cd bartendr
-```
-```
-rake db:create db:migrate db:seed
-```
-```
-rails s
+$ cd pairings
+
+$ rake db:create db:migrate db:seed
+
+$ rails s
 ```

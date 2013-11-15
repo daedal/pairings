@@ -15,7 +15,6 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   	<title><%= content_for?(:title) ? yield(:title) : "Pairings" %></title>
-
   	<%= stylesheet_link_tag    "application" %>
   	<%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
@@ -26,8 +25,6 @@
     <%= render 'application/nav' %>
     <%= yield %>
     <%= render 'application/footer' %>
-
-    
     <%= javascript_include_tag "application" %>
   </body>
 </html>
