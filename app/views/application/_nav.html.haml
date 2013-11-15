@@ -7,11 +7,11 @@
       %li.has-dropdown
         %a{href: "#{wines_path}"} Wines
         %ul.dropdown
-          %li=link_to 'Red', variety_path('red')
-          %li=link_to 'White', variety_path('white')
-          %li=link_to 'Sparkling', variety_path('sparkling')
-          %li=link_to 'Rosé', variety_path('rose')
-          %li=link_to 'Fortified', variety_path('fortified')
+          %li=link_to 'Red', wine_variety_path('red')
+          %li=link_to 'White', wine_variety_path('white')
+          %li=link_to 'Sparkling', wine_variety_path('sparkling')
+          %li=link_to 'Rosé', wine_variety_path('rose')
+          %li=link_to 'Fortified', wine_variety_path('fortified')
       %li.divider
       %li.has-dropdown
         %a{href: "#{cheeses_path}"} Cheeses

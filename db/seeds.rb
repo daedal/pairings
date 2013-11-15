@@ -40,7 +40,7 @@ end
   Wine.create(
     vintage:              rand(1990..Time.now.year),
     winery_id:            rand(1..20), #start at 1 to avoid nil error w/ association
-    grape_id:             rand(1..20),
+    grape_id:             rand(1..20), #start at 1 to avoid nil error w/ association
     alcohol_percentage:   rand(5..20),
     serving_temperature:  rand(40..60),
     sweetness:            rand(9),

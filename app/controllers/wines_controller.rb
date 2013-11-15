@@ -5,7 +5,7 @@ class WinesController < ApplicationController
   end
 
   def show
-    @wine=Wine.find_by(id: params[:id])
+    @wine = Wine.find_by(id: params[:id])
   end
 
   def new
@@ -22,7 +22,7 @@ class WinesController < ApplicationController
   end
 
   def variety
-    @varieties = Grape.find_by(variety: params[:type])
+    @varieties = Grape.where(variety: params[:type])
   end
 
   private

@@ -1,15 +1,29 @@
 .row
   .columns.large-2
-    Vintage
+    Vintage:
   .columns.large-3.pull-7
     =@wine.vintage
 .row
   .columns.large-2
     Grape type:
   .columns.large-3.pull-7
-    =@wine.grape_type
+    =@wine.grape.name
 .row
   .columns.large-2
-    Appellation
+    Grape variety:
   .columns.large-3.pull-7
-    =@wine.appellation
+    =@wine.grape.variety
+.row
+  .columns.large-2
+    Appellation:
+  .columns.large-3.pull-7
+    =@wine.winery.appellation
+
+%br
+%br
+%br
+
+.row
+  .columns
+    -@wine.cheeses.each do |cheese|
+      = link_to " #{cheese.name} #{cheese.milk} #{cheese.country_of_origin}", cheese_path(cheese.id)

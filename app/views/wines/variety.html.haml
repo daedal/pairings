@@ -1,7 +1,8 @@
 %h3 Select you wine
 
 %ul
-  -@varieties.wines.each do |wine|
-    %li.row
-      .columns.large-6
-        = link_to " #{wine.vintage} #{wine.grape.name} #{wine.winery.appellation}", wine_path(wine.id)
+  -@varieties.each do |grape|
+    -grape.wines.each do |wine|
+      %li.row
+        .columns.large-6
+          = link_to " #{wine.vintage} #{wine.grape.name} #{wine.winery.appellation}", wine_path(wine.id)
