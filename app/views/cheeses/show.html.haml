@@ -13,3 +13,12 @@
     Country
   .columns.large-3.pull-7
     =@cheese.country_of_origin
+
+%br
+%br
+%br
+
+.row
+  .columns
+    -@cheese.wines.each do |wine|
+      %li= link_to "#{wine.vintage} #{wine.grape.name} #{wine.winery.name}", wine_path(wine.id)

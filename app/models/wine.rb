@@ -1,7 +1,7 @@
 class Wine < ActiveRecord::Base
 
-  has_many :cheeses_wines
-  has_many :traits_wines
+  has_and_belongs_to_many :cheeses
+  has_and_belongs_to_many :traits
 
   belongs_to :winery
   belongs_to :grape

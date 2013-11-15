@@ -68,6 +68,12 @@ end
    )
 end
 
+@wines = Wine.all
+Cheese.all.each_with_index do |cheese, index|
+  cheese.wines << @wines[index]
+  cheese.wines << @wines[index+50]
+end
+
 200.times do
   Trait.create(
     name:         'Trait Name',
