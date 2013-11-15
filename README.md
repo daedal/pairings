@@ -16,11 +16,8 @@ Front End
 - SCSS  
 
 
-Pairings wants to extend thanks to the team at [import.io](http://www.import.io)
-
-
-
 To run:
+
 ``` sh
 $ git clone <link to repo>
 
