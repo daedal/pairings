@@ -16,11 +16,11 @@
       %li.has-dropdown
         %a{href: "#{cheeses_path}"} Cheeses
         %ul.dropdown
-          %li=link_to 'Cheese Type', cheeses_path
-          %li=link_to 'Cheese Type', cheeses_path
-          %li=link_to 'Cheese Type', cheeses_path
-          %li=link_to 'Cheese Type', cheeses_path
-          %li=link_to 'Cheese Type', cheeses_path
+          %li=link_to 'Soft', cheese_variety_path('soft')
+          / %li=link_to 'Cheese Type', cheese_variety_path('variety')
+          %li=link_to 'Semi-hard', cheese_variety_path('semi-hard')
+          %li=link_to 'Hard', cheese_variety_path('hard')
+          %li=link_to 'Blue', cheese_variety_path('blue')
       %li.divider
       -if current_user
         %li= link_to 'Logout',  logout_path

@@ -6,6 +6,11 @@ sparkling_grape_type = ['pinot noir', 'chardonnay']
 fortified_grape_type = ['port', 'sherry', 'marsala', 'madeira']
 
 
+milk = ['cow', 'sheep', 'goat']
+texture = ['soft', 'semi-hard', 'hard', 'blue']
+country = ['France', 'Ireland', 'Spain', 'US']
+
+
 red_grape_type.each do |type|
   Grape.create(name: type, variety: variety[0])
 end
@@ -54,10 +59,10 @@ end
 50.times do
   Cheese.create(
    name:              'Name',
-   country_of_origin: 'Country',
+   country_of_origin: country[rand(0..2)],
    region:            'Region',
-   milk:              'Cow/Sheep/Goat',
-   texture_type:      'Texture',
+   milk:              milk[rand(0..2)],
+   texture_type:      texture[rand(0..3)],
    color:             'Color',
    age:               rand(0..24),
    )

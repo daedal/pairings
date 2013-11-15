@@ -20,6 +20,10 @@ class CheesesController < ApplicationController
     end
   end
 
+  def variety
+    @cheeses = Cheese.where(texture_type: params[:type])
+  end
+
   private
 
   def cheese_params
