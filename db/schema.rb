@@ -16,6 +16,13 @@ ActiveRecord::Schema.define(version: 20131112180150) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "appellations", force: true do |t|
+    t.string   "name",       null: false
+    t.integer  "region_id",  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "cheeses", force: true do |t|
     t.string   "name",              null: false
     t.string   "country_of_origin"
@@ -43,8 +50,8 @@ ActiveRecord::Schema.define(version: 20131112180150) do
   end
 
   create_table "grapes", force: true do |t|
+  create_table "regions", force: true do |t|
     t.string   "name",       null: false
-    t.string   "variety",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -64,11 +71,11 @@ ActiveRecord::Schema.define(version: 20131112180150) do
   end
 
   create_table "wineries", force: true do |t|
-    t.string   "name",        null: false
-    t.string   "appellation", null: false
-    t.string   "region",      null: false
+    t.string   "name",           null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "appellation_id", null: false
+    t.integer  "region_id",      null: false
   end
 
   create_table "wines", force: true do |t|
