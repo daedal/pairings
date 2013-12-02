@@ -11,6 +11,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'compass'
 gem 'figaro'
 gem 'haml'
+gem 'iron_worker_ng'
 gem 'jbuilder', '~> 1.2' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jquery-rails'
 gem 'newrelic_rpm'
