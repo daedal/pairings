@@ -6,8 +6,8 @@ A site which gives suggestions on cheese/wine pairings
 
 Back End
 - Ruby 2.0  
-- Rails 4  
-- PG Database 
+- Rails 4.1  
+- PG Database
 
 Front End
 - Zurb Foundation  
