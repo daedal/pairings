@@ -1,7 +1,6 @@
 p 'Beginning seeding of database'
 
 appellations = ['Napa', 'Appell 2', 'Sonoma', 'Burgandy']
-regions = ['France', 'Italy', 'Spain', 'US']
 
 type = ['red', 'white', 'rose', 'sparkling', 'fortified']
 red_grape_type = ['cabernet savignon', 'pinot noir', 'merlot', 'sangiovese', 'zinfandel']
@@ -14,7 +13,17 @@ milk = ['cow', 'sheep', 'goat']
 texture = ['soft', 'semi-hard', 'hard', 'blue']
 country = ['France', 'Ireland', 'Spain', 'US']
 
-p 'Creating Grapes'
+
+Rake::Task['seed_regions'].invoke
+# Rake::Task['seed_appellations'].invoke
+p 'Creating Appellations'
+appellations.each do |appellation|
+  a = Appellation.find_or_initialize_by(name: appellation)
+  a.region_id = rand(1..40)
+  a.id ? next : (p 'Failed')
+end
+
+p 'Growing Grapes'
 red_grape_type.length.times do |i|
   Grape.create(varietal: red_grape_type[i])
 end
@@ -35,12 +44,6 @@ fortified_grape_type.length.times do |i|
   Grape.create(varietal: fortified_grape_type[i])
 end
 
-
-p 'Creating Regions'
-regions.length.times do |i|
-  Region.create(name: regions[i])
-end
-
 p 'Creating Appellations'
 appellations.length.times do |i|
   Appellation.create(
@@ -49,7 +52,7 @@ appellations.length.times do |i|
     )
 end
 
-p 'Creating Wineries'
+p 'Building Wineries'
 20.times do
   Winery.create(
     name:           'name',
@@ -58,7 +61,7 @@ p 'Creating Wineries'
     )
 end
 
-p 'Creating Wines'
+p 'Fermenting Grapes'
 100.times do
   Wine.create(
     vintage:              rand(1990..Time.now.year),
@@ -75,7 +78,9 @@ p 'Creating Wines'
     )
 end
 
-p 'Creating Cheeses'
+p 'Woohoo Wine!'
+
+p 'Fermenting Milk'
 50.times do
   Cheese.create(
    name:              'Name',
@@ -88,12 +93,16 @@ p 'Creating Cheeses'
    )
 end
 
+p 'Woohoo cheese!'
+
 p 'Pairing Cheese and Wine'
 @wines = Wine.all
 Cheese.all.each_with_index do |cheese, index|
   cheese.wines << @wines[index]
   cheese.wines << @wines[index+50]
 end
+
+p 'mmmmm'
 
 p 'Creating Traits'
 200.times do
@@ -103,4 +112,4 @@ p 'Creating Traits'
     )
 end
 
-p 'Database successfully seeded! Remember to never drink and drive!!'
+p 'Database successfully seeded! Remember: never drink and drive!!'
