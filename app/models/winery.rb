@@ -8,4 +8,8 @@ class Winery < ActiveRecord::Base
   validates :appellation_id, presence: true
   validates :name,           presence: true
   validates :region_id,      presence: true
+
+  def name_as_a_title
+    "#{name.split.map(&:capitalize).join(' ')}"
+  end
 end
