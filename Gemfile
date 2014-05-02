@@ -6,6 +6,7 @@ gem 'rails', '4.1.0'
 
 gem 'pg'
 
+gem 'aws-sdk'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'compass'
@@ -15,6 +16,7 @@ gem 'iron_worker_ng'
 gem 'jbuilder', '~> 1.2' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jquery-rails'
 gem 'newrelic_rpm'
+gem 'paperclip'
 gem 'redis'
 gem 'sass-rails', '~> 4.0.0'
 gem 'sidekiq'
