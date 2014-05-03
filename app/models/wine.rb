@@ -16,11 +16,11 @@ class Wine < ActiveRecord::Base
   validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
 
   def serving_temperature_as_degree
-    "43˚"
+    "#{serving_temperature}˚"
   end
 
-  def alcohol_content_as_percent
-     "15.5%"
+  def alcohol_percentage_as_percent
+     "#{'%.2f' % (alcohol_percentage * 100.0)}%"
   end
 
 end

@@ -34,6 +34,10 @@
         1,
         null,
         1,
+        null,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/yaron/Desktop/pairings/app/models/region.rb": [
@@ -64,12 +68,16 @@
         1,
         null,
         1,
+        null,
+        1,
         1,
         1,
         1,
         null,
         1,
-        0,
+        null,
+        1,
+        1,
         null,
         null,
         1,
@@ -89,9 +97,13 @@
         1,
         1,
         1,
+        null,
+        1,
+        1,
+        null,
         null
       ]
     },
-    "timestamp": 1398643617
+    "timestamp": 1399086241
   }
 }
